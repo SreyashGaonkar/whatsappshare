@@ -29,8 +29,8 @@ class App extends Component {
       }
     );
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        
-        share.sharePngWhatsApp('test1',(error,res)=>{
+      var base64 = "aGVsbG8gd29yZA0K";
+        share.shareTextWhatsApp('test1',base64,(error,res)=>{
           if(error){
            console.log(`Error found! ${error}`);
           }else{
